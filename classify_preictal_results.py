@@ -1190,10 +1190,10 @@ dataset_45min_EEGECG=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features
 dataset_60min_EEGECG=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_60_45min_channels_EEGECGperformance_Accuracy_x.csv',sep=',')
 
 
-dataset_15min_statistic=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/statistic_raw_15_0min_channels_EEGperformance_Accuracy.csv',sep=',')
-dataset_30min_statistic=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/statistic_raw_30_15min_channels_EEGperformance_Accuracy.csv',sep=',')
-dataset_45min_statistic=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/statistic_raw_45_30min_channels_EEGperformance_Accuracy.csv',sep=',')
-dataset_60min_statistic=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/statistic_raw_60_45min_channels_EEGperformance_Accuracy.csv',sep=',')
+dataset_15min_statistic=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/statistic_raw_15_0min_channels_EEGperformance_Accuracy_test.csv',sep=',')
+dataset_30min_statistic=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/statistic_raw_30_15min_channels_EEGperformance_Accuracy_test.csv',sep=',')
+dataset_45min_statistic=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/statistic_raw_45_30min_channels_EEGperformance_Accuracy_test.csv',sep=',')
+dataset_60min_statistic=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/statistic_raw_60_45min_channels_EEGperformance_Accuracy_test.csv',sep=',')
 
 
 dataset_15min_EEGECG_statistic=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/statistic_raw_15_0min_channels_EEGECGperformance_Accuracy.csv',sep=',')
@@ -1210,6 +1210,17 @@ data_15min_RFT=dataset_15min.iloc[:, 3]
 data_30min_RFT=dataset_30min.iloc[:, 3]
 data_45min_RFT=dataset_45min.iloc[:, 3]
 data_60min_RFT=dataset_60min.iloc[:, 3]
+
+print(np.mean(data_15min_RFT));print(np.mean(data_15min_statistic));
+print(np.mean(data_30min_RFT));print(np.mean(data_30min_statistic));
+print(np.mean(data_45min_RFT));print(np.mean(data_45min_statistic));
+print(np.mean(data_60min_RFT));print(np.mean(data_60min_statistic));
+
+print(np.std(data_15min_RFT));print(np.std(data_15min_statistic));
+print(np.std(data_30min_RFT));print(np.std(data_30min_statistic));
+print(np.std(data_45min_RFT));print(np.std(data_45min_statistic));
+print(np.std(data_60min_RFT));print(np.std(data_60min_statistic));
+
 
 print(stats.ttest_ind(np.array(data_15min_RFT.values.tolist()), np.array(data_15min_statistic.values.tolist())))
 print(stats.ttest_ind(np.array(data_30min_RFT.values.tolist()), np.array(data_30min_statistic.values.tolist())))
@@ -1228,14 +1239,14 @@ bp7 = ax.boxplot(data_45min_statistic , positions=[6], widths=0.3,patch_artist=T
 bp8 = ax.boxplot(data_60min_statistic, positions=[8], widths=0.3,patch_artist=True, showfliers=False)
 
 bp1['boxes'][0].set(color='k', linewidth=0.8)
-bp1['boxes'][0].set(facecolor='w')
+bp1['boxes'][0].set(facecolor='g')
 bp2['boxes'][0].set(color='k', linewidth=0.8)
-bp2['boxes'][0].set(facecolor='w')
+bp2['boxes'][0].set(facecolor='g')
 bp3['boxes'][0].set(color='k', linewidth=0.8)
-bp3['boxes'][0].set(facecolor='w')
+bp3['boxes'][0].set(facecolor='g')
 bp4['boxes'][0].set(color='k', linewidth=0.8)
-bp4['boxes'][0].set(facecolor='w')
-locs, labels = pyplot.yticks([0.85,0.87, 0.89],['0.85','0.87','0.89'],fontsize=10)
+bp4['boxes'][0].set(facecolor='g')
+# locs, labels = pyplot.yticks([0.85,0.87, 0.89],['0.85','0.87','0.89'],fontsize=10)
 locs, labels = pyplot.xticks([1,3,5,7],['15-0 min','30-15 min','45-30 min','60-45 min'],fontsize=10)
 ax.spines['right'].set_visible(False)
 ax.spines['top'].set_visible(False)

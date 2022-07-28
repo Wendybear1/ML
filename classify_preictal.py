@@ -377,7 +377,7 @@ for m in range(1):
     roc_auc_KNN = [];roc_auc_DT = [];roc_auc_RFT = [];roc_auc_NB = [];roc_auc_SVM = [];
     for i in range(100):
         ### evaluate algorithms
-        dataset = pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/PNES_preictal_and_ES_preictal(15_0min)_raw.csv',sep=',')
+        dataset = pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/PNES_preictal_and_ES_preictal(30_15min)_raw.csv',sep=',')
         column_name = dataset.columns[6:].tolist()
         print(column_name)
 
@@ -393,8 +393,8 @@ for m in range(1):
         class_0_under = class_0.sample(class_count_1)
         test_under = pd.concat([class_0_under, class_1], axis=0)
 
-        X = test_under[channels[0:-3]]
-        # X = test_under[channels[0:-1]]
+        # X = test_under[channels[0:-3]]
+        X = test_under[channels[0:-1]]
         # X = test_under[channels[-3:-1]]
         y = test_under[channels[-1]]
 
@@ -404,8 +404,15 @@ for m in range(1):
         X_validation_1 = tf.keras.utils.normalize(X_validation, axis=1)
 
 
+        label_0=np.unique(Y_validation, return_counts=True)[0][0]
+        label_1=np.unique(Y_validation, return_counts=True)[0][1]
+        class_count_0 = np.unique(Y_validation, return_counts=True)[1][0]
+        class_count_1 = np.unique(Y_validation, return_counts=True)[1][1]
 
-
+        print(class_count_0); print(class_count_1)
+        tag_list=[label_0]*class_count_1+[label_1]*class_count_0
+        random.shuffle(tag_list)
+        Y_validation=tag_list
 
         # # Make predictions on validation dataset
         model = KNeighborsClassifier()
@@ -472,7 +479,7 @@ for n in range(len(score_KNN_sum)):
     df['RFT']=score_RFT_sum[n]
     df['NB']=score_NB_sum[n]
     df['SVM']=score_SVM_sum[n]
-    df.to_csv(f'C:\\Users\\wxiong/Documents\\PHD\\combine_features\\performances\\Preictal_classify\\allchannels_June\\statistic_raw_15_0min_channels_EEGperformance_Accuracy_test.csv')
+    df.to_csv(f'C:\\Users\\wxiong/Documents\\PHD\\combine_features\\performances\\Preictal_classify\\allchannels_June\\statistic_raw_30_15min_channels_EEGECGperformance_Accuracy_test.csv')
 
 
 # for n in range(len(roc_auc_KNN_sum)):
