@@ -741,42 +741,52 @@ import scipy.stats as stats
 
 
 
-# ### use all elelctrodes
-# dataset_15min=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_15_0min_channels_EEGperformance_Accuracy_x.csv',sep=',')
-# dataset_30min=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_30_15min_channels_EEGperformance_Accuracy_x.csv',sep=',')
-# dataset_45min=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_45_30min_channels_EEGperformance_Accuracy_x.csv',sep=',')
-# dataset_60min=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_60_45min_channels_EEGperformance_Accuracy_x.csv',sep=',')
-#
-#
-# dataset_15min_EEGECG=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_15_0min_channels_EEGECGperformance_Accuracy_x.csv',sep=',')
-# dataset_30min_EEGECG=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_30_15min_channels_EEGECGperformance_Accuracy_x.csv',sep=',')
-# dataset_45min_EEGECG=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_45_30min_channels_EEGECGperformance_Accuracy_x.csv',sep=',')
-# dataset_60min_EEGECG=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_60_45min_channels_EEGECGperformance_Accuracy_x.csv',sep=',')
-
-# dataset_15min_ECG=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_15_0min_ALLchannels_ECGperformance_Accuracy.csv',sep=',')
-# dataset_30min_ECG=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_30_15min_ALLchannels_ECGperformance_Accuracy.csv',sep=',')
-# dataset_45min_ECG=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_45_30min_ALLchannels_ECGperformance_Accuracy.csv',sep=',')
-# dataset_60min_ECG=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_60_45min_ALLchannels_ECGperformance_Accuracy.csv',sep=',')
+### use all elelctrodes
+dataset_15min=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_15_0min_channels_EEGperformance_Accuracy_x.csv',sep=',')
+dataset_30min=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_30_15min_channels_EEGperformance_Accuracy_x.csv',sep=',')
+dataset_45min=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_45_30min_channels_EEGperformance_Accuracy_x.csv',sep=',')
+dataset_60min=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_60_45min_channels_EEGperformance_Accuracy_x.csv',sep=',')
+dataset_75min=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_75_60min_channels_EEGperformance_Accuracy_x.csv',sep=',')
+dataset_90min=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_90_75min_channels_EEGperformance_Accuracy_x.csv',sep=',')
+dataset_105min=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_105_90min_channels_EEGperformance_Accuracy_x.csv',sep=',')
+dataset_120min=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_120_105min_channels_EEGperformance_Accuracy_x.csv',sep=',')
 
 
+dataset_15min_EEGECG=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_15_0min_channels_EEGECGperformance_Accuracy_x.csv',sep=',')
+dataset_30min_EEGECG=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_30_15min_channels_EEGECGperformance_Accuracy_x.csv',sep=',')
+dataset_45min_EEGECG=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_45_30min_channels_EEGECGperformance_Accuracy_x.csv',sep=',')
+dataset_60min_EEGECG=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_60_45min_channels_EEGECGperformance_Accuracy_x.csv',sep=',')
+dataset_75min_EEGECG=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_75_60min_channels_EEGECGperformance_Accuracy_x.csv',sep=',')
 
-# data_15min = [dataset_15min.iloc[:, 1], dataset_15min.iloc[:, 2], dataset_15min.iloc[:, 3], dataset_15min.iloc[:, 4], dataset_15min.iloc[:, 5]]
-# data_30min = [dataset_30min.iloc[:, 1], dataset_30min.iloc[:, 2], dataset_30min.iloc[:, 3], dataset_30min.iloc[:, 4], dataset_30min.iloc[:, 5]]
-# data_45min = [dataset_45min.iloc[:, 1], dataset_45min.iloc[:, 2], dataset_45min.iloc[:, 3], dataset_45min.iloc[:, 4], dataset_45min.iloc[:, 5]]
-# data_60min = [dataset_60min.iloc[:, 1], dataset_60min.iloc[:, 2], dataset_60min.iloc[:, 3], dataset_60min.iloc[:, 4], dataset_60min.iloc[:, 5]]
-#
-#
-# data_15min_EEGECG = [dataset_15min_EEGECG.iloc[:, 1], dataset_15min_EEGECG.iloc[:, 2], dataset_15min_EEGECG.iloc[:, 3], dataset_15min_EEGECG.iloc[:, 4], dataset_15min_EEGECG.iloc[:, 5]]
-# data_30min_EEGECG = [dataset_30min_EEGECG.iloc[:, 1], dataset_30min_EEGECG.iloc[:, 2], dataset_30min_EEGECG.iloc[:, 3], dataset_30min_EEGECG.iloc[:, 4], dataset_30min_EEGECG.iloc[:, 5]]
-# data_45min_EEGECG = [dataset_45min_EEGECG.iloc[:, 1], dataset_45min_EEGECG.iloc[:, 2], dataset_45min_EEGECG.iloc[:, 3], dataset_45min_EEGECG.iloc[:, 4], dataset_45min_EEGECG.iloc[:, 5]]
-# data_60min_EEGECG = [dataset_60min_EEGECG.iloc[:, 1], dataset_60min_EEGECG.iloc[:, 2], dataset_60min_EEGECG.iloc[:, 3], dataset_60min_EEGECG.iloc[:, 4], dataset_60min_EEGECG.iloc[:, 5]]
-#
-# # data_15min_ECG = [dataset_15min_ECG.iloc[:, 1], dataset_15min_ECG.iloc[:, 2], dataset_15min_ECG.iloc[:, 3], dataset_15min_ECG.iloc[:, 4], dataset_15min_ECG.iloc[:, 5]]
-# # data_30min_ECG = [dataset_30min_ECG.iloc[:, 1], dataset_30min_ECG.iloc[:, 2], dataset_30min_ECG.iloc[:, 3], dataset_30min_ECG.iloc[:, 4], dataset_30min_ECG.iloc[:, 5]]
-# # data_45min_ECG = [dataset_45min_ECG.iloc[:, 1], dataset_45min_ECG.iloc[:, 2], dataset_45min_ECG.iloc[:, 3], dataset_45min_ECG.iloc[:, 4], dataset_45min_ECG.iloc[:, 5]]
-# # data_60min_ECG = [dataset_60min_ECG.iloc[:, 1], dataset_60min_ECG.iloc[:, 2], dataset_60min_ECG.iloc[:, 3], dataset_60min_ECG.iloc[:, 4], dataset_60min_ECG.iloc[:, 5]]
-#
-#
+dataset_15min_ECG=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_15_0min_channels_ECGperformance_Accuracy_x.csv',sep=',')
+dataset_30min_ECG=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_30_15min_channels_ECGperformance_Accuracy_x.csv',sep=',')
+dataset_45min_ECG=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_45_30min_channels_ECGperformance_Accuracy_x.csv',sep=',')
+dataset_60min_ECG=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_60_45min_channels_ECGperformance_Accuracy_x.csv',sep=',')
+dataset_75min_ECG=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_75_60min_channels_ECGperformance_Accuracy_x.csv',sep=',')
+
+
+data_15min = [dataset_15min.iloc[:, 1], dataset_15min.iloc[:, 2], dataset_15min.iloc[:, 3], dataset_15min.iloc[:, 4], dataset_15min.iloc[:, 5]]
+data_30min = [dataset_30min.iloc[:, 1], dataset_30min.iloc[:, 2], dataset_30min.iloc[:, 3], dataset_30min.iloc[:, 4], dataset_30min.iloc[:, 5]]
+data_45min = [dataset_45min.iloc[:, 1], dataset_45min.iloc[:, 2], dataset_45min.iloc[:, 3], dataset_45min.iloc[:, 4], dataset_45min.iloc[:, 5]]
+data_60min = [dataset_60min.iloc[:, 1], dataset_60min.iloc[:, 2], dataset_60min.iloc[:, 3], dataset_60min.iloc[:, 4], dataset_60min.iloc[:, 5]]
+data_75min = [dataset_75min.iloc[:, 1], dataset_75min.iloc[:, 2], dataset_75min.iloc[:, 3], dataset_75min.iloc[:, 4], dataset_75min.iloc[:, 5]]
+data_90min = [dataset_90min.iloc[:, 1], dataset_90min.iloc[:, 2], dataset_90min.iloc[:, 3], dataset_90min.iloc[:, 4], dataset_90min.iloc[:, 5]]
+data_105min = [dataset_105min.iloc[:, 1], dataset_105min.iloc[:, 2], dataset_105min.iloc[:, 3], dataset_105min.iloc[:, 4], dataset_105min.iloc[:, 5]]
+data_120min = [dataset_120min.iloc[:, 1], dataset_120min.iloc[:, 2], dataset_120min.iloc[:, 3], dataset_120min.iloc[:, 4], dataset_120min.iloc[:, 5]]
+
+data_15min_EEGECG = [dataset_15min_EEGECG.iloc[:, 1], dataset_15min_EEGECG.iloc[:, 2], dataset_15min_EEGECG.iloc[:, 3], dataset_15min_EEGECG.iloc[:, 4], dataset_15min_EEGECG.iloc[:, 5]]
+data_30min_EEGECG = [dataset_30min_EEGECG.iloc[:, 1], dataset_30min_EEGECG.iloc[:, 2], dataset_30min_EEGECG.iloc[:, 3], dataset_30min_EEGECG.iloc[:, 4], dataset_30min_EEGECG.iloc[:, 5]]
+data_45min_EEGECG = [dataset_45min_EEGECG.iloc[:, 1], dataset_45min_EEGECG.iloc[:, 2], dataset_45min_EEGECG.iloc[:, 3], dataset_45min_EEGECG.iloc[:, 4], dataset_45min_EEGECG.iloc[:, 5]]
+data_60min_EEGECG = [dataset_60min_EEGECG.iloc[:, 1], dataset_60min_EEGECG.iloc[:, 2], dataset_60min_EEGECG.iloc[:, 3], dataset_60min_EEGECG.iloc[:, 4], dataset_60min_EEGECG.iloc[:, 5]]
+data_75min_EEGECG = [dataset_75min_EEGECG.iloc[:, 1], dataset_75min_EEGECG.iloc[:, 2], dataset_75min_EEGECG.iloc[:, 3], dataset_75min_EEGECG.iloc[:, 4], dataset_75min_EEGECG.iloc[:, 5]]
+
+data_15min_ECG = [dataset_15min_ECG.iloc[:, 1], dataset_15min_ECG.iloc[:, 2], dataset_15min_ECG.iloc[:, 3], dataset_15min_ECG.iloc[:, 4], dataset_15min_ECG.iloc[:, 5]]
+data_30min_ECG = [dataset_30min_ECG.iloc[:, 1], dataset_30min_ECG.iloc[:, 2], dataset_30min_ECG.iloc[:, 3], dataset_30min_ECG.iloc[:, 4], dataset_30min_ECG.iloc[:, 5]]
+data_45min_ECG = [dataset_45min_ECG.iloc[:, 1], dataset_45min_ECG.iloc[:, 2], dataset_45min_ECG.iloc[:, 3], dataset_45min_ECG.iloc[:, 4], dataset_45min_ECG.iloc[:, 5]]
+data_60min_ECG = [dataset_60min_ECG.iloc[:, 1], dataset_60min_ECG.iloc[:, 2], dataset_60min_ECG.iloc[:, 3], dataset_60min_ECG.iloc[:, 4], dataset_60min_ECG.iloc[:, 5]]
+data_75min_ECG = [dataset_75min_ECG.iloc[:, 1], dataset_75min_ECG.iloc[:, 2], dataset_75min_ECG.iloc[:, 3], dataset_75min_ECG.iloc[:, 4], dataset_75min_ECG.iloc[:, 5]]
+
+
 # # plot figures
 # fig1, ax = pyplot.subplots(figsize=(5, 4))
 # bp1 = ax.boxplot(data_15min, positions=[1,2,3,4,5], widths=0.3,patch_artist=True, showfliers=False)
@@ -847,96 +857,102 @@ import scipy.stats as stats
 #     if box == bp2['boxes'][4]:
 #         box.set(color='C0', linewidth=0.8)
 #         box.set(facecolor='C0')
-# locs, labels = pyplot.yticks([0.6,0.7,0.8],['0.6','0.7','0.8'],fontsize=12)
+#
+# locs, labels = pyplot.yticks([0.5,0.7,0.9],['0.5','0.7','0.9'],fontsize=12)
+# # locs, labels = pyplot.yticks([0.6,0.7,0.8],['0.6','0.7','0.8'],fontsize=12)
+# # locs, labels = pyplot.yticks([0.75,0.8,0.85],['0.75','0.8','0.85'],fontsize=12)
+# locs, labels = pyplot.xticks([3,9,15,21],['15-0 min','30-15 min','45-30 min','60-45 min'],fontsize=10)
+# # locs, labels = pyplot.xticks([3,9,15,21],['75-60 min','90-75 min','105-90 min','120-105 min'],fontsize=10)
+# ax.spines['right'].set_visible(False)
+# ax.spines['top'].set_visible(False)
+# ax.set_xlabel('Preictal periods',fontsize=12)
+# ax.set_ylabel('F1 score',fontsize=12)
+# ax.set_title('Classification(EEG)',fontsize=12)
+# ax.legend([bp1["boxes"][0],bp1["boxes"][1], bp1["boxes"][2],bp1["boxes"][3],bp1["boxes"][4]], ['KNN','DT','RF','NB','SVM'], loc='lower left',fontsize=7)
+# pyplot.tight_layout()
+# pyplot.show()
+#
+# fig1, ax = pyplot.subplots(figsize=(5, 4))
+# bp1 = ax.boxplot(data_15min_ECG, positions=[1,2,3,4,5], widths=0.3,patch_artist=True, showfliers=False)
+# bp2 = ax.boxplot(data_30min_ECG, positions=[7,8,9,10,11], widths=0.3,patch_artist=True, showfliers=False)
+# bp3 = ax.boxplot(data_45min_ECG , positions=[13,14,15,16,17], widths=0.3,patch_artist=True, showfliers=False)
+# bp4 = ax.boxplot(data_60min_ECG, positions=[19,20,21,22,23], widths=0.3,patch_artist=True, showfliers=False)
+# for box in bp1['boxes']:
+#     if box == bp1['boxes'][0]:
+#         box.set(color='k', linewidth=0.8)
+#         box.set(facecolor='k')
+#     if box == bp1['boxes'][1]:
+#         box.set(color='r', linewidth=0.8)
+#         box.set(facecolor='r')
+#     if box == bp1['boxes'][2]:
+#         box.set(color='g', linewidth=0.8)
+#         box.set(facecolor='g')
+#     if box == bp1['boxes'][3]:
+#         box.set(color='grey', linewidth=0.8)
+#         box.set(facecolor='grey')
+#     if box == bp1['boxes'][4]:
+#         box.set(color='C0', linewidth=0.8)
+#         box.set(facecolor='C0')
+# for box in bp3['boxes']:
+#     if box == bp3['boxes'][0]:
+#         box.set(color='k', linewidth=0.8)
+#         box.set(facecolor='k')
+#     if box == bp3['boxes'][1]:
+#         box.set(color='r', linewidth=0.8)
+#         box.set(facecolor='r')
+#     if box == bp3['boxes'][2]:
+#         box.set(color='g', linewidth=0.8)
+#         box.set(facecolor='g')
+#     if box == bp3['boxes'][3]:
+#         box.set(color='grey', linewidth=0.8)
+#         box.set(facecolor='grey')
+#     if box == bp3['boxes'][4]:
+#         box.set(color='C0', linewidth=0.8)
+#         box.set(facecolor='C0')
+# for box in bp4['boxes']:
+#     if box == bp4['boxes'][0]:
+#         box.set(color='k', linewidth=0.8)
+#         box.set(facecolor='k')
+#     if box == bp4['boxes'][1]:
+#         box.set(color='r', linewidth=0.8)
+#         box.set(facecolor='r')
+#     if box == bp4['boxes'][2]:
+#         box.set(color='g', linewidth=0.8)
+#         box.set(facecolor='g')
+#     if box == bp4['boxes'][3]:
+#         box.set(color='grey', linewidth=0.8)
+#         box.set(facecolor='grey')
+#     if box == bp4['boxes'][4]:
+#         box.set(color='C0', linewidth=0.8)
+#         box.set(facecolor='C0')
+# for box in bp2['boxes']:
+#     if box == bp2['boxes'][0]:
+#         box.set(color='k', linewidth=0.8)
+#         box.set(facecolor='k')
+#     if box == bp2['boxes'][1]:
+#         box.set(color='r', linewidth=0.8)
+#         box.set(facecolor='r')
+#     if box == bp2['boxes'][2]:
+#         box.set(color='g', linewidth=0.8)
+#         box.set(facecolor='g')
+#     if box == bp2['boxes'][3]:
+#         box.set(color='grey', linewidth=0.8)
+#         box.set(facecolor='grey')
+#     if box == bp2['boxes'][4]:
+#         box.set(color='C0', linewidth=0.8)
+#         box.set(facecolor='C0')
+# # locs, labels = pyplot.yticks([0.4,0.5,0.6],['0.4','0.5','0.6'],fontsize=12)
+# locs, labels = pyplot.yticks([0.4,0.5,0.6],['0.5','0.7','0.9'],fontsize=12)
+# # locs, labels = pyplot.yticks([0.45,0.50,0.55],['0.45','0.50','0.55'],fontsize=12)
 # locs, labels = pyplot.xticks([3,9,15,21],['15-0 min','30-15 min','45-30 min','60-45 min'],fontsize=10)
 # ax.spines['right'].set_visible(False)
 # ax.spines['top'].set_visible(False)
 # ax.set_xlabel('Preictal periods',fontsize=12)
-# ax.set_ylabel('Accuracy',fontsize=12)
-# ax.set_title('Preictal data classification(EEG)',fontsize=12)
-# ax.legend([bp1["boxes"][0],bp1["boxes"][1], bp1["boxes"][2],bp1["boxes"][3],bp1["boxes"][4]], ['KNN','DT','RFT','NB','SVM'], loc='center left',fontsize=7)
+# ax.set_ylabel('F1 score',fontsize=12)
+# ax.set_title('Classification(ECG)',fontsize=12)
+# # ax.legend([bp1["boxes"][0],bp1["boxes"][1], bp1["boxes"][2],bp1["boxes"][3],bp1["boxes"][4]], ['KNN','DT','RFT','NB','SVM'], loc='lower left',fontsize=7)
 # pyplot.tight_layout()
 # pyplot.show()
-#
-# # fig1, ax = pyplot.subplots(figsize=(5, 4))
-# # bp1 = ax.boxplot(data_15min_ECG, positions=[1,2,3,4,5], widths=0.3,patch_artist=True, showfliers=False)
-# # bp2 = ax.boxplot(data_30min_ECG, positions=[7,8,9,10,11], widths=0.3,patch_artist=True, showfliers=False)
-# # bp3 = ax.boxplot(data_45min_ECG , positions=[13,14,15,16,17], widths=0.3,patch_artist=True, showfliers=False)
-# # bp4 = ax.boxplot(data_60min_ECG, positions=[19,20,21,22,23], widths=0.3,patch_artist=True, showfliers=False)
-# # for box in bp1['boxes']:
-# #     if box == bp1['boxes'][0]:
-# #         box.set(color='k', linewidth=0.8)
-# #         box.set(facecolor='k')
-# #     if box == bp1['boxes'][1]:
-# #         box.set(color='r', linewidth=0.8)
-# #         box.set(facecolor='r')
-# #     if box == bp1['boxes'][2]:
-# #         box.set(color='g', linewidth=0.8)
-# #         box.set(facecolor='g')
-# #     if box == bp1['boxes'][3]:
-# #         box.set(color='grey', linewidth=0.8)
-# #         box.set(facecolor='grey')
-# #     if box == bp1['boxes'][4]:
-# #         box.set(color='C0', linewidth=0.8)
-# #         box.set(facecolor='C0')
-# # for box in bp3['boxes']:
-# #     if box == bp3['boxes'][0]:
-# #         box.set(color='k', linewidth=0.8)
-# #         box.set(facecolor='k')
-# #     if box == bp3['boxes'][1]:
-# #         box.set(color='r', linewidth=0.8)
-# #         box.set(facecolor='r')
-# #     if box == bp3['boxes'][2]:
-# #         box.set(color='g', linewidth=0.8)
-# #         box.set(facecolor='g')
-# #     if box == bp3['boxes'][3]:
-# #         box.set(color='grey', linewidth=0.8)
-# #         box.set(facecolor='grey')
-# #     if box == bp3['boxes'][4]:
-# #         box.set(color='C0', linewidth=0.8)
-# #         box.set(facecolor='C0')
-# # for box in bp4['boxes']:
-# #     if box == bp4['boxes'][0]:
-# #         box.set(color='k', linewidth=0.8)
-# #         box.set(facecolor='k')
-# #     if box == bp4['boxes'][1]:
-# #         box.set(color='r', linewidth=0.8)
-# #         box.set(facecolor='r')
-# #     if box == bp4['boxes'][2]:
-# #         box.set(color='g', linewidth=0.8)
-# #         box.set(facecolor='g')
-# #     if box == bp4['boxes'][3]:
-# #         box.set(color='grey', linewidth=0.8)
-# #         box.set(facecolor='grey')
-# #     if box == bp4['boxes'][4]:
-# #         box.set(color='C0', linewidth=0.8)
-# #         box.set(facecolor='C0')
-# # for box in bp2['boxes']:
-# #     if box == bp2['boxes'][0]:
-# #         box.set(color='k', linewidth=0.8)
-# #         box.set(facecolor='k')
-# #     if box == bp2['boxes'][1]:
-# #         box.set(color='r', linewidth=0.8)
-# #         box.set(facecolor='r')
-# #     if box == bp2['boxes'][2]:
-# #         box.set(color='g', linewidth=0.8)
-# #         box.set(facecolor='g')
-# #     if box == bp2['boxes'][3]:
-# #         box.set(color='grey', linewidth=0.8)
-# #         box.set(facecolor='grey')
-# #     if box == bp2['boxes'][4]:
-# #         box.set(color='C0', linewidth=0.8)
-# #         box.set(facecolor='C0')
-# # locs, labels = pyplot.yticks([0.4,0.5,0.6],['0.4','0.5','0.6'],fontsize=12)
-# # locs, labels = pyplot.xticks([3,9,15,21],['15-0 min','30-15 min','45-30 min','60-45 min'],fontsize=10)
-# # ax.spines['right'].set_visible(False)
-# # ax.spines['top'].set_visible(False)
-# # ax.set_xlabel('Preictal periods',fontsize=12)
-# # ax.set_ylabel('Accuracy',fontsize=12)
-# # ax.set_title('Preictal data classification(ECG)',fontsize=12)
-# # ax.legend([bp1["boxes"][0],bp1["boxes"][1], bp1["boxes"][2],bp1["boxes"][3],bp1["boxes"][4]], ['KNN','DT','RFT','NB','SVM'], loc='center left',fontsize=7)
-# # pyplot.tight_layout()
-# # pyplot.show()
 #
 # fig1, ax = pyplot.subplots(figsize=(5, 4))
 # bp1 = ax.boxplot(data_15min_EEGECG, positions=[1,2,3,4,5], widths=0.3,patch_artist=True, showfliers=False)
@@ -1007,42 +1023,74 @@ import scipy.stats as stats
 #     if box == bp2['boxes'][4]:
 #         box.set(color='C0', linewidth=0.8)
 #         box.set(facecolor='C0')
-# locs, labels = pyplot.yticks([0.6,0.7,0.8],['0.6','0.7','0.8'],fontsize=12)
+#
+# locs, labels = pyplot.yticks([0.5,0.7,0.9],['0.5','0.7','0.9'],fontsize=12)
+# # locs, labels = pyplot.yticks([0.75,0.8,0.85],['0.75','0.8','0.85'],fontsize=12)
 # locs, labels = pyplot.xticks([3,9,15,21],['15-0 min','30-15 min','45-30 min','60-45 min'],fontsize=10)
 # ax.spines['right'].set_visible(False)
 # ax.spines['top'].set_visible(False)
 # ax.set_xlabel('Preictal periods',fontsize=12)
-# ax.set_ylabel('Accuracy',fontsize=12)
-# ax.set_title('Preictal data classification(EEGECG)',fontsize=12)
-# ax.legend([bp1["boxes"][0],bp1["boxes"][1], bp1["boxes"][2],bp1["boxes"][3],bp1["boxes"][4]], ['KNN','DT','RFT','NB','SVM'], loc='center left',fontsize=7)
+# ax.set_ylabel('F1 score',fontsize=12)
+# ax.set_title('Classification(EEGECG)',fontsize=12)
+# # ax.legend([bp1["boxes"][0],bp1["boxes"][1], bp1["boxes"][2],bp1["boxes"][3],bp1["boxes"][4]], ['KNN','DT','RFT','NB','SVM'], loc='center left',fontsize=7)
 # pyplot.tight_layout()
 # pyplot.show()
-#
-#
-# # statistic
+
+
 # for m in range(1,6):
-#     print(np.mean(dataset_15min.iloc[:,m]));print(np.mean(dataset_30min.iloc[:,m]));
-#     print(np.mean(dataset_45min.iloc[:,m]));print(np.mean(dataset_60min.iloc[:,m]));
-# # normal distribution
-# #     _, p_15min = stats.normaltest(np.array(dataset_15min.iloc[:,m].values.tolist()))
-# #     _, p_30min = stats.normaltest(np.array(dataset_30min.iloc[:,m].values.tolist()))
-# #     _, p_45min = stats.normaltest(np.array(dataset_45min.iloc[:,m].values.tolist()))
-# #     _, p_60min = stats.normaltest(np.array(dataset_60min.iloc[:,m].values.tolist()))
-# #     print(p_15min);print(p_30min);print(p_45min);print(p_60min);
-#
+#     print(np.mean(dataset_15min.iloc[:,m]));print(np.std(dataset_15min.iloc[:,m]));
+
+
+# for m in range(1,6):
+#     print(np.median(dataset_15min.iloc[:,m]));print(np.median(dataset_30min.iloc[:,m]));
+#     print(np.median(dataset_45min.iloc[:,m]));print(np.median(dataset_60min.iloc[:,m]));
+# normal distribution
+#     _, p_15min = stats.normaltest(np.array(dataset_15min.iloc[:,m].values.tolist()))
+#     _, p_30min = stats.normaltest(np.array(dataset_30min.iloc[:,m].values.tolist()))
+#     _, p_45min = stats.normaltest(np.array(dataset_45min.iloc[:,m].values.tolist()))
+#     _, p_60min = stats.normaltest(np.array(dataset_60min.iloc[:,m].values.tolist()))
+#     print(p_15min);print(p_30min);print(p_45min);print(p_60min);
+
+# print(stats.ttest_ind(np.array(dataset_15min.iloc[:, 3].values.tolist()), np.array(dataset_45min.iloc[:, 1].values.tolist())))
+# print(stats.ttest_ind(np.array(dataset_15min.iloc[:, 3].values.tolist()), np.array(dataset_15min.iloc[:, 2].values.tolist())))
+# print(stats.ttest_ind(np.array(dataset_15min.iloc[:, 3].values.tolist()), np.array(dataset_15min.iloc[:, 5].values.tolist())))
+
+
 # m=3
-# print(stats.ttest_ind(np.array(dataset_15min.iloc[:, m].values.tolist()), np.array(dataset_30min.iloc[:, m].values.tolist())))
-# print(stats.ttest_ind(np.array(dataset_15min.iloc[:, m].values.tolist()), np.array(dataset_45min.iloc[:, m].values.tolist())))
-# print(stats.ttest_ind(np.array(dataset_15min.iloc[:, m].values.tolist()), np.array(dataset_60min.iloc[:, m].values.tolist())))
+# # # print(stats.ttest_ind(np.array(dataset_15min.iloc[:, m].values.tolist()), np.array(dataset_30min.iloc[:, m].values.tolist())))
+# # # print(stats.ttest_ind(np.array(dataset_15min.iloc[:, m].values.tolist()), np.array(dataset_45min.iloc[:, m].values.tolist())))
+# # # print(stats.ttest_ind(np.array(dataset_15min.iloc[:, m].values.tolist()), np.array(dataset_60min.iloc[:, m].values.tolist())))
 # print(stats.ttest_ind(np.array(dataset_30min.iloc[:, m].values.tolist()), np.array(dataset_45min.iloc[:, m].values.tolist())))
 # print(stats.ttest_ind(np.array(dataset_30min.iloc[:, m].values.tolist()), np.array(dataset_60min.iloc[:, m].values.tolist())))
 # print(stats.ttest_ind(np.array(dataset_45min.iloc[:, m].values.tolist()), np.array(dataset_60min.iloc[:, m].values.tolist())))
-#
-#
-#
+
+
+
 # for m in range(1,6):
-#     print(np.mean(dataset_15min_EEGECG.iloc[:,m]));print(np.mean(dataset_30min_EEGECG.iloc[:,m]));
-#     print(np.mean(dataset_45min_EEGECG.iloc[:,m]));print(np.mean(dataset_60min_EEGECG.iloc[:,m]));
+#     print(np.median(dataset_15min_ECG.iloc[:,m]));print(np.median(dataset_30min_ECG.iloc[:,m]));
+#     print(np.median(dataset_45min_ECG.iloc[:,m]));print(np.median(dataset_60min_ECG.iloc[:,m]));
+# #     # _, p_15min = stats.normaltest(np.array(dataset_15min_ECG.iloc[:, m].values.tolist()))
+# #     # _, p_30min = stats.normaltest(np.array(dataset_30min_ECG.iloc[:, m].values.tolist()))
+# #     # _, p_45min = stats.normaltest(np.array(dataset_45min_ECG.iloc[:, m].values.tolist()))
+# #     # _, p_60min = stats.normaltest(np.array(dataset_60min_ECG.iloc[:, m].values.tolist()))
+# #     # print(p_15min);print(p_30min);print(p_45min);print(p_60min);
+#
+# # print(stats.ttest_ind(np.array(dataset_60min_ECG.iloc[:, 1].values.tolist()), np.array(dataset_60min_ECG.iloc[:, 2].values.tolist())))
+# # print(stats.ttest_ind(np.array(dataset_60min_ECG.iloc[:, 1].values.tolist()), np.array(dataset_60min_ECG.iloc[:, 3].values.tolist())))
+# # print(stats.ttest_ind(np.array(dataset_60min_ECG.iloc[:, 1].values.tolist()), np.array(dataset_45min_ECG.iloc[:, 5].values.tolist())))
+#
+# m=2
+# print(stats.ttest_ind(np.array(dataset_60min_ECG.iloc[:, m].values.tolist()), np.array(dataset_45min_ECG.iloc[:, m].values.tolist())))
+# print(stats.ttest_ind(np.array(dataset_60min_ECG.iloc[:, m].values.tolist()), np.array(dataset_30min_ECG.iloc[:, m].values.tolist())))
+# print(stats.ttest_ind(np.array(dataset_60min_ECG.iloc[:, m].values.tolist()), np.array(dataset_15min_ECG.iloc[:, m].values.tolist())))
+# print(stats.ttest_ind(np.array(dataset_15min_ECG.iloc[:, m].values.tolist()), np.array(dataset_30min_ECG.iloc[:, m].values.tolist())))
+# print(stats.ttest_ind(np.array(dataset_15min_ECG.iloc[:, m].values.tolist()), np.array(dataset_45min_ECG.iloc[:, m].values.tolist())))
+# print(stats.ttest_ind(np.array(dataset_30min_ECG.iloc[:, m].values.tolist()), np.array(dataset_45min_ECG.iloc[:, m].values.tolist())))
+
+
+# for m in range(1,6):
+#     print(np.median(dataset_15min_EEGECG.iloc[:,m]));print(np.median(dataset_30min_EEGECG.iloc[:,m]));
+#     print(np.median(dataset_45min_EEGECG.iloc[:,m]));print(np.median(dataset_60min_EEGECG.iloc[:,m]));
 #     # _, p_15min = stats.normaltest(np.array(dataset_15min_EEGECG.iloc[:, m].values.tolist()))
 #     # _, p_30min = stats.normaltest(np.array(dataset_30min_EEGECG.iloc[:, m].values.tolist()))
 #     # _, p_45min = stats.normaltest(np.array(dataset_45min_EEGECG.iloc[:, m].values.tolist()))
@@ -1055,31 +1103,32 @@ import scipy.stats as stats
 # print(stats.ttest_ind(np.array(dataset_30min_EEGECG.iloc[:, m].values.tolist()), np.array(dataset_45min_EEGECG.iloc[:, m].values.tolist())))
 # print(stats.ttest_ind(np.array(dataset_30min_EEGECG.iloc[:, m].values.tolist()), np.array(dataset_60min_EEGECG.iloc[:, m].values.tolist())))
 # print(stats.ttest_ind(np.array(dataset_45min_EEGECG.iloc[:, m].values.tolist()), np.array(dataset_60min_EEGECG.iloc[:, m].values.tolist())))
-#
-#
-#
+
+
+
 # m=3
 # print(stats.ttest_ind(np.array(dataset_15min.iloc[:, 3].values.tolist()), np.array(dataset_15min_EEGECG.iloc[:, 3].values.tolist())))
 # print(stats.ttest_ind(np.array(dataset_30min.iloc[:, 3].values.tolist()), np.array(dataset_30min_EEGECG.iloc[:, 3].values.tolist())))
 # print(stats.ttest_ind(np.array(dataset_45min.iloc[:, 3].values.tolist()), np.array(dataset_45min_EEGECG.iloc[:, 3].values.tolist())))
 # print(stats.ttest_ind(np.array(dataset_60min.iloc[:, 3].values.tolist()), np.array(dataset_60min_EEGECG.iloc[:, 3].values.tolist())))
-#
-#
-#
+
+
+
+
+### plot p values
+# import matplotlib.ticker as mticker
+# f = mticker.ScalarFormatter(useOffset=False, useMathText=True)
 #
 # data_15min_RFT=dataset_15min.iloc[:, 3]
 # data_30min_RFT=dataset_30min.iloc[:, 3]
 # data_45min_RFT=dataset_45min.iloc[:, 3]
 # data_60min_RFT=dataset_60min.iloc[:, 3]
-#
-#
-#
-# # _, p_15min = stats.normaltest(np.array(dataset_15min_statistic.iloc[:,3].values.tolist()))
-# # _, p_30min = stats.normaltest(np.array(dataset_30min_statistic.iloc[:,3].values.tolist()))
-# # _, p_45min = stats.normaltest(np.array(dataset_45min_statistic.iloc[:,3].values.tolist()))
-# # _, p_60min = stats.normaltest(np.array(dataset_60min_statistic.iloc[:,3].values.tolist()))
-# # print(p_15min);print(p_30min);print(p_45min);print(p_60min);
-#
+# # # _, p_15min = stats.normaltest(np.array(dataset_15min_statistic.iloc[:,3].values.tolist()))
+# # # _, p_30min = stats.normaltest(np.array(dataset_30min_statistic.iloc[:,3].values.tolist()))
+# # # _, p_45min = stats.normaltest(np.array(dataset_45min_statistic.iloc[:,3].values.tolist()))
+# # # _, p_60min = stats.normaltest(np.array(dataset_60min_statistic.iloc[:,3].values.tolist()))
+# # # print(p_15min);print(p_30min);print(p_45min);print(p_60min);
+# #
 # fig1, ax = pyplot.subplots(figsize=(5, 4))
 # bp1 = ax.boxplot(data_15min_RFT, positions=[1], widths=0.3,patch_artist=True, showfliers=False)
 # bp2 = ax.boxplot(data_30min_RFT, positions=[2], widths=0.3,patch_artist=True, showfliers=False)
@@ -1095,26 +1144,27 @@ import scipy.stats as stats
 # bp4['boxes'][0].set(facecolor='w')
 #
 # x1, x2 = 1, 2
-# y, h, col = data_15min_RFT.max() + 0.001, 0.001, 'k'
+# y, h, col = 0.89 + 0.001, 0.001, 'k'
 # pyplot.plot([x1, x1, x2, x2], [y, y+h, y+h, y], lw=1.5, c=col)
-# pyplot.text((x1+x2)*.5, y+h, "p=2.5e-29", ha='center', va='bottom', color=col,fontsize=10)
+# # pyplot.text((x1+x2)*.5, 0.892, "p=2.5e-29", ha='center', va='bottom', color=col,fontsize=10)
+# pyplot.text((x1+x2)*.5, 0.8908, "p=${}$".format(f._formatSciNotation('%1.10e' % 2.5e-29)), ha='center', va='bottom', color=col,fontsize=9)
+#
 # x1, x2 = 1, 3
-# y, h, col = data_15min_RFT.max() + 0.005, 0.001, 'k'
+# y, h, col = 0.89 + 0.007, 0.001, 'k'
 # pyplot.plot([x1, x1, x2, x2], [y, y+h, y+h, y], lw=1.5, c=col)
-# pyplot.text((x1+x2)*.5, y+h, "p=7.9e-25", ha='center', va='bottom', color=col,fontsize=10)
+# # pyplot.text((x1+x2)*.5, 0.898, "p=7.9e-25", ha='center', va='bottom', color=col,fontsize=10)
+# pyplot.text((x1+x2)*.5, 0.8968, "p=${}$".format(f._formatSciNotation('%1.10e' % 7.9e-25)), ha='center', va='bottom', color=col,fontsize=9)
+#
 # x1, x2 = 1, 4
-# y, h, col = data_15min_RFT.max() + 0.009, 0.001, 'k'
+# y, h, col = 0.89 + 0.013, 0.001, 'k'
 # pyplot.plot([x1, x1, x2, x2], [y, y+h, y+h, y], lw=1.5, c=col)
-# pyplot.text((x1+x2)*.5, y+h, "p=8.3e-28", ha='center', va='bottom', color=col,fontsize=10)
-# # x1, x2 = 2, 3
-# # y, h, col = data_30min_RFT.max() + 0.001, 0.001, 'k'
-# # pyplot.plot([x1, x1, x2, x2], [y, y+h, y+h, y], lw=1.5, c=col)
-# # pyplot.text((x1+x2)*.5, y+h, "p=0.054", ha='center', va='bottom', color=col,fontsize=8)
-# # x1, x2 = 3, 4
-# # y, h, col = data_45min_RFT.max() + 0.001, 0.001, 'k'
-# # pyplot.plot([x1, x1, x2, x2], [y, y+h, y+h, y], lw=1.5, c=col)
-# # pyplot.text((x1+x2)*.5, y+h, "p=0.349", ha='center', va='bottom', color=col,fontsize=8)
-# locs, labels = pyplot.yticks([0.85,0.87, 0.89],['0.85','0.87','0.89'],fontsize=10)
+# # pyplot.text((x1+x2)*.5, 0.904, "p=8.3e-28", ha='center', va='bottom', color=col,fontsize=10)
+# pyplot.text((x1+x2)*.5, 0.9036, "p=${}$".format(f._formatSciNotation('%1.10e' % 8.3e-28)), ha='center', va='bottom', color=col,fontsize=9)
+#
+#
+#
+# locs, labels = pyplot.yticks([0.80, 0.85, 0.90],['0.80','0.85','0.90'],fontsize=10)
+# # locs, labels = pyplot.yticks([0.5,0.7, 0.9],['0.5','0.7','0.9'],fontsize=10)
 # locs, labels = pyplot.xticks([1,2,3,4],['15-0 min','30-15 min','45-30 min','60-45 min'],fontsize=10)
 # ax.spines['right'].set_visible(False)
 # ax.spines['top'].set_visible(False)
@@ -1123,6 +1173,61 @@ import scipy.stats as stats
 # # ax.set_title('Preictal data classification(EEG, RFT)',fontsize=12)
 # pyplot.tight_layout()
 # pyplot.show()
+#
+#
+#
+#
+# data_15min_RFT_ECG=dataset_15min_ECG.iloc[:, 3]
+# data_30min_RFT_ECG=dataset_30min_ECG.iloc[:, 3]
+# data_45min_RFT_ECG=dataset_45min_ECG.iloc[:, 3]
+# data_60min_RFT_ECG=dataset_60min_ECG.iloc[:, 3]
+# # # _, p_15min = stats.normaltest(np.array(dataset_15min_statistic.iloc[:,3].values.tolist()))
+# # # _, p_30min = stats.normaltest(np.array(dataset_30min_statistic.iloc[:,3].values.tolist()))
+# # # _, p_45min = stats.normaltest(np.array(dataset_45min_statistic.iloc[:,3].values.tolist()))
+# # # _, p_60min = stats.normaltest(np.array(dataset_60min_statistic.iloc[:,3].values.tolist()))
+# # # print(p_15min);print(p_30min);print(p_45min);print(p_60min);
+#
+# fig1, ax = pyplot.subplots(figsize=(5, 4))
+# bp1 = ax.boxplot(data_15min_RFT_ECG, positions=[1], widths=0.3,patch_artist=True, showfliers=False)
+# bp2 = ax.boxplot(data_30min_RFT_ECG, positions=[2], widths=0.3,patch_artist=True, showfliers=False)
+# bp3 = ax.boxplot(data_45min_RFT_ECG, positions=[3], widths=0.3,patch_artist=True, showfliers=False)
+# bp4 = ax.boxplot(data_60min_RFT_ECG, positions=[4], widths=0.3,patch_artist=True, showfliers=False)
+# bp1['boxes'][0].set(color='k', linewidth=0.8)
+# bp1['boxes'][0].set(facecolor='w')
+# bp2['boxes'][0].set(color='k', linewidth=0.8)
+# bp2['boxes'][0].set(facecolor='w')
+# bp3['boxes'][0].set(color='k', linewidth=0.8)
+# bp3['boxes'][0].set(facecolor='w')
+# bp4['boxes'][0].set(color='k', linewidth=0.8)
+# bp4['boxes'][0].set(facecolor='w')
+#
+#
+#
+#
+# x1, x2 = 4, 3
+# y, h, col = 0.59 + 0.001, 0.001, 'k'
+# pyplot.plot([x1, x1, x2, x2], [y, y+h, y+h, y], lw=1.5, c=col)
+# pyplot.text((x1+x2)*.5, 0.591, "p=${}$".format(f._formatSciNotation('%1.10e' % 1.6e-53)), ha='center', va='bottom', color=col,fontsize=9)
+# x1, x2 = 4, 2
+# y, h, col = 0.59 + 0.007, 0.001, 'k'
+# pyplot.plot([x1, x1, x2, x2], [y, y+h, y+h, y], lw=1.5, c=col)
+# pyplot.text((x1+x2)*.5, 0.5965, "p=${}$".format(f._formatSciNotation('%1.10e' % 1.7e-06)), ha='center', va='bottom', color=col,fontsize=9)
+# x1, x2 = 4, 1
+# y, h, col = 0.59 + 0.013, 0.001, 'k'
+# pyplot.plot([x1, x1, x2, x2], [y, y+h, y+h, y], lw=1.5, c=col)
+# pyplot.text((x1+x2)*.5, 0.6040, "p=${}$".format(f._formatSciNotation('%1.10e' % 2.3e-45)), ha='center', va='bottom', color=col,fontsize=9)
+#
+#
+#
+# locs, labels = pyplot.yticks([0.50,0.55, 0.60],['0.50','0.55','0.60'],fontsize=10)
+# locs, labels = pyplot.xticks([1,2,3,4],['15-0 min','30-15 min','45-30 min','60-45 min'],fontsize=10)
+# ax.spines['right'].set_visible(False)
+# ax.spines['top'].set_visible(False)
+# ax.set_xlabel('Preictal periods',fontsize=12)
+# ax.set_ylabel('Accuracy',fontsize=12)
+# pyplot.tight_layout()
+# pyplot.show()
+#
 #
 #
 #
@@ -1148,27 +1253,23 @@ import scipy.stats as stats
 # bp4['boxes'][0].set(facecolor='w')
 #
 # x1, x2 = 1, 2
-# y, h, col = data_15min_RFT_EEGECG.max() + 0.001, 0.001, 'k'
+# y, h, col = 0.89 + 0.001, 0.001, 'k'
 # pyplot.plot([x1, x1, x2, x2], [y, y+h, y+h, y], lw=1.5, c=col)
-# pyplot.text((x1+x2)*.5, y+h, "p=2.4e-32", ha='center', va='bottom', color=col,fontsize=10)
-# x1, x2 = 1, 3
-# y, h, col = data_15min_RFT_EEGECG.max() + 0.005, 0.001, 'k'
-# pyplot.plot([x1, x1, x2, x2], [y, y+h, y+h, y], lw=1.5, c=col)
-# pyplot.text((x1+x2)*.5, y+h, "p=5.1e-23", ha='center', va='bottom', color=col,fontsize=10)
-# x1, x2 = 1, 4
-# y, h, col = data_15min_RFT_EEGECG.max() + 0.009, 0.001, 'k'
-# pyplot.plot([x1, x1, x2, x2], [y, y+h, y+h, y], lw=1.5, c=col)
-# pyplot.text((x1+x2)*.5, y+h, "p=1.3e-7", ha='center', va='bottom', color=col,fontsize=10)
-# # x1, x2 = 2, 3
-# # y, h, col = data_30min_RFT_EEGECG.max() + 0.001, 0.001, 'k'
-# # pyplot.plot([x1, x1, x2, x2], [y, y+h, y+h, y], lw=1.5, c=col)
-# # pyplot.text((x1+x2)*.5, y+h, "p=0.0058", ha='center', va='bottom', color=col,fontsize=8)
-# # x1, x2 = 3, 4
-# # y, h, col = data_60min_RFT_EEGECG.max() + 0.001, 0.001, 'k'
-# # pyplot.plot([x1, x1, x2, x2], [y, y+h, y+h, y], lw=1.5, c=col)
-# # pyplot.text((x1+x2)*.5, y+h, "p=2.5e-05", ha='center', va='bottom', color=col,fontsize=8)
+# pyplot.text((x1+x2)*.5, 0.891, "p=${}$".format(f._formatSciNotation('%1.10e' % 2.4e-32)), ha='center', va='bottom', color=col,fontsize=9)
 #
-# locs, labels = pyplot.yticks([0.85,0.87, 0.89],['0.85','0.87','0.89'],fontsize=10)
+# x1, x2 = 1, 3
+# y, h, col = 0.89 + 0.007, 0.001, 'k'
+# pyplot.plot([x1, x1, x2, x2], [y, y+h, y+h, y], lw=1.5, c=col)
+# pyplot.text((x1+x2)*.5, 0.8968, "p=${}$".format(f._formatSciNotation('%1.10e' % 5.1e-23)), ha='center', va='bottom', color=col,fontsize=9)
+#
+# x1, x2 = 1, 4
+# y, h, col = 0.89 + 0.013, 0.001, 'k'
+# pyplot.plot([x1, x1, x2, x2], [y, y+h, y+h, y], lw=1.5, c=col)
+# pyplot.text((x1+x2)*.5, 0.903, "p=${}$".format(f._formatSciNotation('%1.10e' % 1.3e-7)), ha='center', va='bottom', color=col,fontsize=9)
+#
+#
+# locs, labels = pyplot.yticks([0.80, 0.85, 0.90],['0.80','0.85','0.90'],fontsize=10)
+# # locs, labels = pyplot.yticks([0.5,0.7, 0.9],['0.5','0.7','0.9'],fontsize=10)
 # locs, labels = pyplot.xticks([1,2,3,4],['15-0 min','30-15 min','45-30 min','60-45 min'],fontsize=10)
 # ax.spines['right'].set_visible(False)
 # ax.spines['top'].set_visible(False)
@@ -1178,83 +1279,85 @@ import scipy.stats as stats
 # pyplot.tight_layout()
 # pyplot.show()
 
-dataset_15min=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_15_0min_channels_EEGperformance_Accuracy_x.csv',sep=',')
-dataset_30min=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_30_15min_channels_EEGperformance_Accuracy_x.csv',sep=',')
-dataset_45min=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_45_30min_channels_EEGperformance_Accuracy_x.csv',sep=',')
-dataset_60min=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_60_45min_channels_EEGperformance_Accuracy_x.csv',sep=',')
 
 
-dataset_15min_EEGECG=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_15_0min_channels_EEGECGperformance_Accuracy_x.csv',sep=',')
-dataset_30min_EEGECG=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_30_15min_channels_EEGECGperformance_Accuracy_x.csv',sep=',')
-dataset_45min_EEGECG=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_45_30min_channels_EEGECGperformance_Accuracy_x.csv',sep=',')
-dataset_60min_EEGECG=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_60_45min_channels_EEGECGperformance_Accuracy_x.csv',sep=',')
-
-
-dataset_15min_statistic=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/statistic_raw_15_0min_channels_EEGperformance_Accuracy_test.csv',sep=',')
-dataset_30min_statistic=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/statistic_raw_30_15min_channels_EEGperformance_Accuracy_test.csv',sep=',')
-dataset_45min_statistic=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/statistic_raw_45_30min_channels_EEGperformance_Accuracy_test.csv',sep=',')
-dataset_60min_statistic=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/statistic_raw_60_45min_channels_EEGperformance_Accuracy_test.csv',sep=',')
-
-
-dataset_15min_EEGECG_statistic=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/statistic_raw_15_0min_channels_EEGECGperformance_Accuracy.csv',sep=',')
-dataset_30min_EEGECG_statistic=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/statistic_raw_30_15min_channels_EEGECGperformance_Accuracy.csv',sep=',')
-dataset_45min_EEGECG_statistic=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/statistic_raw_45_30min_channels_EEGECGperformance_Accuracy.csv',sep=',')
-dataset_60min_EEGECG_statistic=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/statistic_raw_60_45min_channels_EEGECGperformance_Accuracy.csv',sep=',')
-
-
-data_15min_statistic=dataset_15min_statistic.iloc[:, 3]
-data_30min_statistic=dataset_30min_statistic.iloc[:, 3]
-data_45min_statistic=dataset_45min_statistic.iloc[:, 3]
-data_60min_statistic=dataset_60min_statistic.iloc[:, 3]
-data_15min_RFT=dataset_15min.iloc[:, 3]
-data_30min_RFT=dataset_30min.iloc[:, 3]
-data_45min_RFT=dataset_45min.iloc[:, 3]
-data_60min_RFT=dataset_60min.iloc[:, 3]
-
-print(np.mean(data_15min_RFT));print(np.mean(data_15min_statistic));
-print(np.mean(data_30min_RFT));print(np.mean(data_30min_statistic));
-print(np.mean(data_45min_RFT));print(np.mean(data_45min_statistic));
-print(np.mean(data_60min_RFT));print(np.mean(data_60min_statistic));
-
-print(np.std(data_15min_RFT));print(np.std(data_15min_statistic));
-print(np.std(data_30min_RFT));print(np.std(data_30min_statistic));
-print(np.std(data_45min_RFT));print(np.std(data_45min_statistic));
-print(np.std(data_60min_RFT));print(np.std(data_60min_statistic));
-
-
-print(stats.ttest_ind(np.array(data_15min_RFT.values.tolist()), np.array(data_15min_statistic.values.tolist())))
-print(stats.ttest_ind(np.array(data_30min_RFT.values.tolist()), np.array(data_30min_statistic.values.tolist())))
-print(stats.ttest_ind(np.array(data_45min_RFT.values.tolist()), np.array(data_45min_statistic.values.tolist())))
-print(stats.ttest_ind(np.array(data_60min_RFT.values.tolist()), np.array(data_60min_statistic.values.tolist())))
-
-
-fig1, ax = pyplot.subplots(figsize=(5, 4))
-bp1 = ax.boxplot(data_15min_RFT, positions=[1], widths=0.3,patch_artist=True, showfliers=False)
-bp2 = ax.boxplot(data_30min_RFT, positions=[3], widths=0.3,patch_artist=True, showfliers=False)
-bp3 = ax.boxplot(data_45min_RFT , positions=[5], widths=0.3,patch_artist=True, showfliers=False)
-bp4 = ax.boxplot(data_60min_RFT, positions=[7], widths=0.3,patch_artist=True, showfliers=False)
-bp5 = ax.boxplot(data_15min_statistic, positions=[2], widths=0.3,patch_artist=True, showfliers=False)
-bp6 = ax.boxplot(data_30min_statistic, positions=[4], widths=0.3,patch_artist=True, showfliers=False)
-bp7 = ax.boxplot(data_45min_statistic , positions=[6], widths=0.3,patch_artist=True, showfliers=False)
-bp8 = ax.boxplot(data_60min_statistic, positions=[8], widths=0.3,patch_artist=True, showfliers=False)
-
-bp1['boxes'][0].set(color='k', linewidth=0.8)
-bp1['boxes'][0].set(facecolor='g')
-bp2['boxes'][0].set(color='k', linewidth=0.8)
-bp2['boxes'][0].set(facecolor='g')
-bp3['boxes'][0].set(color='k', linewidth=0.8)
-bp3['boxes'][0].set(facecolor='g')
-bp4['boxes'][0].set(color='k', linewidth=0.8)
-bp4['boxes'][0].set(facecolor='g')
-# locs, labels = pyplot.yticks([0.85,0.87, 0.89],['0.85','0.87','0.89'],fontsize=10)
-locs, labels = pyplot.xticks([1,3,5,7],['15-0 min','30-15 min','45-30 min','60-45 min'],fontsize=10)
-ax.spines['right'].set_visible(False)
-ax.spines['top'].set_visible(False)
-ax.set_xlabel('Preictal periods',fontsize=12)
-ax.set_ylabel('Accuracy',fontsize=12)
-# ax.set_title('Preictal data classification(EEG, RFT)',fontsize=12)
-pyplot.tight_layout()
-pyplot.show()
+# dataset_15min=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_15_0min_channels_EEGperformance_Accuracy_x.csv',sep=',')
+# dataset_30min=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_30_15min_channels_EEGperformance_Accuracy_x.csv',sep=',')
+# dataset_45min=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_45_30min_channels_EEGperformance_Accuracy_x.csv',sep=',')
+# dataset_60min=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_60_45min_channels_EEGperformance_Accuracy_x.csv',sep=',')
+#
+#
+# dataset_15min_EEGECG=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_15_0min_channels_EEGECGperformance_Accuracy_x.csv',sep=',')
+# dataset_30min_EEGECG=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_30_15min_channels_EEGECGperformance_Accuracy_x.csv',sep=',')
+# dataset_45min_EEGECG=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_45_30min_channels_EEGECGperformance_Accuracy_x.csv',sep=',')
+# dataset_60min_EEGECG=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_60_45min_channels_EEGECGperformance_Accuracy_x.csv',sep=',')
+#
+#
+# dataset_15min_statistic=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/statistic_raw_15_0min_channels_EEGperformance_Accuracy_test.csv',sep=',')
+# dataset_30min_statistic=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/statistic_raw_30_15min_channels_EEGperformance_Accuracy_test.csv',sep=',')
+# dataset_45min_statistic=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/statistic_raw_45_30min_channels_EEGperformance_Accuracy_test.csv',sep=',')
+# dataset_60min_statistic=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/statistic_raw_60_45min_channels_EEGperformance_Accuracy_test.csv',sep=',')
+#
+#
+# dataset_15min_EEGECG_statistic=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/statistic_raw_15_0min_channels_EEGECGperformance_Accuracy.csv',sep=',')
+# dataset_30min_EEGECG_statistic=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/statistic_raw_30_15min_channels_EEGECGperformance_Accuracy.csv',sep=',')
+# dataset_45min_EEGECG_statistic=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/statistic_raw_45_30min_channels_EEGECGperformance_Accuracy.csv',sep=',')
+# dataset_60min_EEGECG_statistic=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/statistic_raw_60_45min_channels_EEGECGperformance_Accuracy.csv',sep=',')
+#
+#
+# data_15min_statistic=dataset_15min_statistic.iloc[:, 3]
+# data_30min_statistic=dataset_30min_statistic.iloc[:, 3]
+# data_45min_statistic=dataset_45min_statistic.iloc[:, 3]
+# data_60min_statistic=dataset_60min_statistic.iloc[:, 3]
+# data_15min_RFT=dataset_15min.iloc[:, 3]
+# data_30min_RFT=dataset_30min.iloc[:, 3]
+# data_45min_RFT=dataset_45min.iloc[:, 3]
+# data_60min_RFT=dataset_60min.iloc[:, 3]
+#
+# print(np.mean(data_15min_RFT));print(np.mean(data_15min_statistic));
+# print(np.mean(data_30min_RFT));print(np.mean(data_30min_statistic));
+# print(np.mean(data_45min_RFT));print(np.mean(data_45min_statistic));
+# print(np.mean(data_60min_RFT));print(np.mean(data_60min_statistic));
+#
+# print(np.std(data_15min_RFT));print(np.std(data_15min_statistic));
+# print(np.std(data_30min_RFT));print(np.std(data_30min_statistic));
+# print(np.std(data_45min_RFT));print(np.std(data_45min_statistic));
+# print(np.std(data_60min_RFT));print(np.std(data_60min_statistic));
+#
+#
+# print(stats.ttest_ind(np.array(data_15min_RFT.values.tolist()), np.array(data_15min_statistic.values.tolist())))
+# print(stats.ttest_ind(np.array(data_30min_RFT.values.tolist()), np.array(data_30min_statistic.values.tolist())))
+# print(stats.ttest_ind(np.array(data_45min_RFT.values.tolist()), np.array(data_45min_statistic.values.tolist())))
+# print(stats.ttest_ind(np.array(data_60min_RFT.values.tolist()), np.array(data_60min_statistic.values.tolist())))
+#
+#
+# fig1, ax = pyplot.subplots(figsize=(5, 4))
+# bp1 = ax.boxplot(data_15min_RFT, positions=[1], widths=0.3,patch_artist=True, showfliers=False)
+# bp2 = ax.boxplot(data_30min_RFT, positions=[3], widths=0.3,patch_artist=True, showfliers=False)
+# bp3 = ax.boxplot(data_45min_RFT , positions=[5], widths=0.3,patch_artist=True, showfliers=False)
+# bp4 = ax.boxplot(data_60min_RFT, positions=[7], widths=0.3,patch_artist=True, showfliers=False)
+# bp5 = ax.boxplot(data_15min_statistic, positions=[2], widths=0.3,patch_artist=True, showfliers=False)
+# bp6 = ax.boxplot(data_30min_statistic, positions=[4], widths=0.3,patch_artist=True, showfliers=False)
+# bp7 = ax.boxplot(data_45min_statistic , positions=[6], widths=0.3,patch_artist=True, showfliers=False)
+# bp8 = ax.boxplot(data_60min_statistic, positions=[8], widths=0.3,patch_artist=True, showfliers=False)
+#
+# bp1['boxes'][0].set(color='k', linewidth=0.8)
+# bp1['boxes'][0].set(facecolor='g')
+# bp2['boxes'][0].set(color='k', linewidth=0.8)
+# bp2['boxes'][0].set(facecolor='g')
+# bp3['boxes'][0].set(color='k', linewidth=0.8)
+# bp3['boxes'][0].set(facecolor='g')
+# bp4['boxes'][0].set(color='k', linewidth=0.8)
+# bp4['boxes'][0].set(facecolor='g')
+# # locs, labels = pyplot.yticks([0.85,0.87, 0.89],['0.85','0.87','0.89'],fontsize=10)
+# locs, labels = pyplot.xticks([1,3,5,7],['15-0 min','30-15 min','45-30 min','60-45 min'],fontsize=10)
+# ax.spines['right'].set_visible(False)
+# ax.spines['top'].set_visible(False)
+# ax.set_xlabel('Preictal periods',fontsize=12)
+# ax.set_ylabel('Accuracy',fontsize=12)
+# # ax.set_title('Preictal data classification(EEG, RFT)',fontsize=12)
+# pyplot.tight_layout()
+# pyplot.show()
 
 
 
@@ -1589,3 +1692,310 @@ pyplot.show()
 # # ax.legend([bp1["boxes"][0],bp1["boxes"][1], bp1["boxes"][2],bp1["boxes"][3]], ['15-0 min','30-15 min','45-30 min','60-45 min'], loc='lower right',fontsize=7)
 # pyplot.tight_layout()
 # pyplot.show()
+
+
+
+
+
+# # plot figures
+# fig1, ax = pyplot.subplots(1,3, figsize=(8, 3))
+#
+# custom_ylim = (0.5, 0.9)
+# pyplot.setp(ax, ylim=custom_ylim)
+# for axs in ax.flat:
+#     axs.spines['left'].set_visible(False)
+#     axs.spines['right'].set_visible(False)
+#     axs.spines['top'].set_visible(False)
+#     axs.spines['bottom'].set_visible(False)
+#     axs.set_yticks([])
+#     axs.set_xticks([])
+#
+#
+# bp1 = ax[0].boxplot(data_15min, positions=[1,1.5,2,2.5,3], widths=0.5,patch_artist=True, showfliers=False)
+# bp2 = ax[0].boxplot(data_30min, positions=[6,6.5,7,7.5,8], widths=0.5,patch_artist=True, showfliers=False)
+# bp3 = ax[0].boxplot(data_45min , positions=[11,11.5,12,12.5,13], widths=0.5,patch_artist=True, showfliers=False)
+# bp4 = ax[0].boxplot(data_60min, positions=[16,16.5,17,17.5,18], widths=0.5,patch_artist=True, showfliers=False)
+# for box in bp1['boxes']:
+#     if box == bp1['boxes'][0]:
+#         box.set(color='k', linewidth=0.8)
+#         box.set(facecolor='k')
+#     if box == bp1['boxes'][1]:
+#         box.set(color='r', linewidth=0.8)
+#         box.set(facecolor='r')
+#     if box == bp1['boxes'][2]:
+#         box.set(color='g', linewidth=0.8)
+#         box.set(facecolor='g')
+#     if box == bp1['boxes'][3]:
+#         box.set(color='grey', linewidth=0.8)
+#         box.set(facecolor='grey')
+#     if box == bp1['boxes'][4]:
+#         box.set(color='C0', linewidth=0.8)
+#         box.set(facecolor='C0')
+# for box in bp3['boxes']:
+#     if box == bp3['boxes'][0]:
+#         box.set(color='k', linewidth=0.8)
+#         box.set(facecolor='k')
+#     if box == bp3['boxes'][1]:
+#         box.set(color='r', linewidth=0.8)
+#         box.set(facecolor='r')
+#     if box == bp3['boxes'][2]:
+#         box.set(color='g', linewidth=0.8)
+#         box.set(facecolor='g')
+#     if box == bp3['boxes'][3]:
+#         box.set(color='grey', linewidth=0.8)
+#         box.set(facecolor='grey')
+#     if box == bp3['boxes'][4]:
+#         box.set(color='C0', linewidth=0.8)
+#         box.set(facecolor='C0')
+# for box in bp4['boxes']:
+#     if box == bp4['boxes'][0]:
+#         box.set(color='k', linewidth=0.8)
+#         box.set(facecolor='k')
+#     if box == bp4['boxes'][1]:
+#         box.set(color='r', linewidth=0.8)
+#         box.set(facecolor='r')
+#     if box == bp4['boxes'][2]:
+#         box.set(color='g', linewidth=0.8)
+#         box.set(facecolor='g')
+#     if box == bp4['boxes'][3]:
+#         box.set(color='grey', linewidth=0.8)
+#         box.set(facecolor='grey')
+#     if box == bp4['boxes'][4]:
+#         box.set(color='C0', linewidth=0.8)
+#         box.set(facecolor='C0')
+# for box in bp2['boxes']:
+#     if box == bp2['boxes'][0]:
+#         box.set(color='k', linewidth=0.8)
+#         box.set(facecolor='k')
+#     if box == bp2['boxes'][1]:
+#         box.set(color='r', linewidth=0.8)
+#         box.set(facecolor='r')
+#     if box == bp2['boxes'][2]:
+#         box.set(color='g', linewidth=0.8)
+#         box.set(facecolor='g')
+#     if box == bp2['boxes'][3]:
+#         box.set(color='grey', linewidth=0.8)
+#         box.set(facecolor='grey')
+#     if box == bp2['boxes'][4]:
+#         box.set(color='C0', linewidth=0.8)
+#         box.set(facecolor='C0')
+# # locs, labels = pyplot.yticks([0.6,0.7,0.8],['0.6','0.7','0.8'],fontsize=12)
+# ax[0].set_yticks([0.5,0.7,0.9])
+# ax[0].set_yticklabels(['0.5','0.7','0.9'],fontsize=12)
+# ax[0].set_xticks([2,7,12,17])
+# ax[0].set_xticklabels(['15-0 min','30-15 min','45-30 min','60-45 min'],rotation = 13,fontsize=10)
+# ax[0].spines['right'].set_visible(False)
+# ax[0].spines['top'].set_visible(False)
+# ax[0].set_xlabel('Preictal periods',fontsize=13)
+# ax[0].set_ylabel('Accuracy',fontsize=13)
+# ax[0].set_title('EEG',fontsize=12)
+# # ax[0].legend([bp1["boxes"][0],bp1["boxes"][1], bp1["boxes"][2],bp1["boxes"][3],bp1["boxes"][4]], ['KNN','DT','RFT','NB','SVM'], loc='lower left',fontsize=6)
+# # pyplot.tight_layout()
+# # pyplot.show()
+#
+#
+#
+# bp1 = ax[1].boxplot(data_15min_ECG, positions=[1,1.5,2,2.5,3], widths=0.5,patch_artist=True, showfliers=False)
+# bp2 = ax[1].boxplot(data_30min_ECG, positions=[6,6.5,7,7.5,8], widths=0.5,patch_artist=True, showfliers=False)
+# bp3 = ax[1].boxplot(data_45min_ECG , positions=[11,11.5,12,12.5,13], widths=0.5,patch_artist=True, showfliers=False)
+# bp4 = ax[1].boxplot(data_60min_ECG, positions=[16,16.5,17,17.5,18], widths=0.5,patch_artist=True, showfliers=False)
+# for box in bp1['boxes']:
+#     if box == bp1['boxes'][0]:
+#         box.set(color='k', linewidth=0.8)
+#         box.set(facecolor='k')
+#     if box == bp1['boxes'][1]:
+#         box.set(color='r', linewidth=0.8)
+#         box.set(facecolor='r')
+#     if box == bp1['boxes'][2]:
+#         box.set(color='g', linewidth=0.8)
+#         box.set(facecolor='g')
+#     if box == bp1['boxes'][3]:
+#         box.set(color='grey', linewidth=0.8)
+#         box.set(facecolor='grey')
+#     if box == bp1['boxes'][4]:
+#         box.set(color='C0', linewidth=0.8)
+#         box.set(facecolor='C0')
+# for box in bp3['boxes']:
+#     if box == bp3['boxes'][0]:
+#         box.set(color='k', linewidth=0.8)
+#         box.set(facecolor='k')
+#     if box == bp3['boxes'][1]:
+#         box.set(color='r', linewidth=0.8)
+#         box.set(facecolor='r')
+#     if box == bp3['boxes'][2]:
+#         box.set(color='g', linewidth=0.8)
+#         box.set(facecolor='g')
+#     if box == bp3['boxes'][3]:
+#         box.set(color='grey', linewidth=0.8)
+#         box.set(facecolor='grey')
+#     if box == bp3['boxes'][4]:
+#         box.set(color='C0', linewidth=0.8)
+#         box.set(facecolor='C0')
+# for box in bp4['boxes']:
+#     if box == bp4['boxes'][0]:
+#         box.set(color='k', linewidth=0.8)
+#         box.set(facecolor='k')
+#     if box == bp4['boxes'][1]:
+#         box.set(color='r', linewidth=0.8)
+#         box.set(facecolor='r')
+#     if box == bp4['boxes'][2]:
+#         box.set(color='g', linewidth=0.8)
+#         box.set(facecolor='g')
+#     if box == bp4['boxes'][3]:
+#         box.set(color='grey', linewidth=0.8)
+#         box.set(facecolor='grey')
+#     if box == bp4['boxes'][4]:
+#         box.set(color='C0', linewidth=0.8)
+#         box.set(facecolor='C0')
+# for box in bp2['boxes']:
+#     if box == bp2['boxes'][0]:
+#         box.set(color='k', linewidth=0.8)
+#         box.set(facecolor='k')
+#     if box == bp2['boxes'][1]:
+#         box.set(color='r', linewidth=0.8)
+#         box.set(facecolor='r')
+#     if box == bp2['boxes'][2]:
+#         box.set(color='g', linewidth=0.8)
+#         box.set(facecolor='g')
+#     if box == bp2['boxes'][3]:
+#         box.set(color='grey', linewidth=0.8)
+#         box.set(facecolor='grey')
+#     if box == bp2['boxes'][4]:
+#         box.set(color='C0', linewidth=0.8)
+#         box.set(facecolor='C0')
+# # axs[1].set_yticks([0.4,0.5,0.6])
+# # axs[1].set_yticklabels(['0.4','0.5','0.6'],fontsize=12)
+# # ax[1].set_yticks([0.5,0.7,0.9])
+# # ax[1].set_yticklabels(['0.5','0.7','0.9'],fontsize=12)
+# # axs[1].set_xticks([3,9,15,21])
+# # axs[1].set_xticklabels(['15-0 min','30-15 min','45-30 min','60-45 min'],rotation = 15,fontsize=12)
+#
+# ax[1].spines['right'].set_visible(False)
+# ax[1].spines['top'].set_visible(False)
+# ax[1].spines['bottom'].set_visible(False)
+# # axs[1].set_xlabel('Preictal periods',fontsize=12)
+# # axs[1].set_ylabel('Accuracy',fontsize=12)
+# ax[1].set_title('ECG',fontsize=12)
+# ax[1].set_xticks([])
+# ax[1].legend([bp1["boxes"][0],bp1["boxes"][1], bp1["boxes"][2],bp1["boxes"][3],bp1["boxes"][4]], ['KNN','DT','RF','NB','SVM'], loc='center left',fontsize=6)
+# # pyplot.tight_layout()
+# # pyplot.show()
+#
+#
+# bp1 = ax[2].boxplot(data_15min_EEGECG, positions=[1,1.5,2,2.5,3], widths=0.5,patch_artist=True, showfliers=False)
+# bp2 = ax[2].boxplot(data_30min_EEGECG, positions=[6,6.5,7,7.5,8], widths=0.5,patch_artist=True, showfliers=False)
+# bp3 = ax[2].boxplot(data_45min_EEGECG, positions=[11,11.5,12,12.5,13], widths=0.5,patch_artist=True, showfliers=False)
+# bp4 = ax[2].boxplot(data_60min_EEGECG, positions=[16,16.5,17,17.5,18], widths=0.5,patch_artist=True, showfliers=False)
+# for box in bp1['boxes']:
+#     if box == bp1['boxes'][0]:
+#         box.set(color='k', linewidth=0.8)
+#         box.set(facecolor='k')
+#     if box == bp1['boxes'][1]:
+#         box.set(color='r', linewidth=0.8)
+#         box.set(facecolor='r')
+#     if box == bp1['boxes'][2]:
+#         box.set(color='g', linewidth=0.8)
+#         box.set(facecolor='g')
+#     if box == bp1['boxes'][3]:
+#         box.set(color='grey', linewidth=0.8)
+#         box.set(facecolor='grey')
+#     if box == bp1['boxes'][4]:
+#         box.set(color='C0', linewidth=0.8)
+#         box.set(facecolor='C0')
+# for box in bp3['boxes']:
+#     if box == bp3['boxes'][0]:
+#         box.set(color='k', linewidth=0.8)
+#         box.set(facecolor='k')
+#     if box == bp3['boxes'][1]:
+#         box.set(color='r', linewidth=0.8)
+#         box.set(facecolor='r')
+#     if box == bp3['boxes'][2]:
+#         box.set(color='g', linewidth=0.8)
+#         box.set(facecolor='g')
+#     if box == bp3['boxes'][3]:
+#         box.set(color='grey', linewidth=0.8)
+#         box.set(facecolor='grey')
+#     if box == bp3['boxes'][4]:
+#         box.set(color='C0', linewidth=0.8)
+#         box.set(facecolor='C0')
+# for box in bp4['boxes']:
+#     if box == bp4['boxes'][0]:
+#         box.set(color='k', linewidth=0.8)
+#         box.set(facecolor='k')
+#     if box == bp4['boxes'][1]:
+#         box.set(color='r', linewidth=0.8)
+#         box.set(facecolor='r')
+#     if box == bp4['boxes'][2]:
+#         box.set(color='g', linewidth=0.8)
+#         box.set(facecolor='g')
+#     if box == bp4['boxes'][3]:
+#         box.set(color='grey', linewidth=0.8)
+#         box.set(facecolor='grey')
+#     if box == bp4['boxes'][4]:
+#         box.set(color='C0', linewidth=0.8)
+#         box.set(facecolor='C0')
+# for box in bp2['boxes']:
+#     if box == bp2['boxes'][0]:
+#         box.set(color='k', linewidth=0.8)
+#         box.set(facecolor='k')
+#     if box == bp2['boxes'][1]:
+#         box.set(color='r', linewidth=0.8)
+#         box.set(facecolor='r')
+#     if box == bp2['boxes'][2]:
+#         box.set(color='g', linewidth=0.8)
+#         box.set(facecolor='g')
+#     if box == bp2['boxes'][3]:
+#         box.set(color='grey', linewidth=0.8)
+#         box.set(facecolor='grey')
+#     if box == bp2['boxes'][4]:
+#         box.set(color='C0', linewidth=0.8)
+#         box.set(facecolor='C0')
+# # locs, labels = pyplot.yticks([0.6,0.7,0.8],['0.6','0.7','0.8'],fontsize=12)
+# # ax[2].set_yticks([0.5,0.7,0.9])
+# # ax[2].set_yticklabels(['0.5','0.7','0.9'],fontsize=12)
+# # axs[2].set_xticks([3,9,15,21])
+# # axs[2].set_xticklabels(['15-0 min','30-15 min','45-30 min','60-45 min'],rotation = 15,fontsize=12)
+# ax[2].spines['right'].set_visible(False)
+# ax[2].spines['top'].set_visible(False)
+# ax[2].spines['bottom'].set_visible(False)
+# ax[2].set_xticks([])
+# # axs[2].set_xlabel('Preictal periods',fontsize=12)
+# # axs[2].set_ylabel('Accuracy',fontsize=12)
+# ax[2].set_title('EEGECG',fontsize=12)
+# # ax.legend([bp1["boxes"][0],bp1["boxes"][1], bp1["boxes"][2],bp1["boxes"][3],bp1["boxes"][4]], ['KNN','DT','RFT','NB','SVM'], loc='center left',fontsize=7)
+# pyplot.tight_layout()
+# pyplot.show()
+
+
+
+## different parameters
+
+dataset_15min_EEGECG_5_100_rbf=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_15_0min_channels_EEGECGperformance_Accuracy_KNN5_SVMrbf_RF100.csv',sep=',')
+acc_KNN5 = dataset_15min_EEGECG_5_100_rbf.iloc[:, 1]
+acc_DT100 = dataset_15min_EEGECG_5_100_rbf.iloc[:, 3]
+
+dataset_15min_EEGECG_10_200_sigmoid=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_15_0min_channels_EEGECGperformance_Accuracy_KNN10_SVMsigmoid_RF200.csv',sep=',')
+acc_KNN10 = dataset_15min_EEGECG_10_200_sigmoid.iloc[:, 1]
+acc_DT200 = dataset_15min_EEGECG_10_200_sigmoid.iloc[:, 3]
+
+dataset_15min_EEGECG_3_50_rbf=pd.read_csv('C:/Users/wxiong/Documents/PHD/combine_features/performances/Preictal_classify/allchannels_June/raw_15_0min_channels_EEGECGperformance_Accuracy_KNN3_SVMrbf_RF50.csv',sep=',')
+acc_KNN3 = dataset_15min_EEGECG_3_50_rbf.iloc[:, 1]
+acc_DT50 = dataset_15min_EEGECG_3_50_rbf.iloc[:, 3]
+
+
+_, p_15min = stats.normaltest(acc_KNN3)
+_, p_30min = stats.normaltest(acc_KNN5)
+_, p_45min = stats.normaltest(acc_KNN10)
+print(p_15min);print(p_30min);print(p_45min);
+print(np.median(acc_KNN3));print(np.median(acc_KNN5));print(np.median(acc_KNN10));
+print(stats.ttest_ind(acc_KNN3, acc_KNN5))
+print(stats.ttest_ind(acc_KNN10, acc_KNN5))
+
+
+_, p_15min = stats.normaltest(acc_DT50)
+_, p_30min = stats.normaltest(acc_DT100)
+_, p_45min = stats.normaltest(acc_DT200)
+print(p_15min);print(p_30min);print(p_45min);
+print(np.median(acc_DT50));print(np.median(acc_DT100));print(np.median(acc_DT200));
+print(stats.ttest_ind(acc_DT50, acc_DT100))
+print(stats.ttest_ind(acc_DT200, acc_DT100))
